@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import LabelComponent from "./LabelComponent";
 import ImageBox from "./ImageBox";
+import RowContainer from "./RowContainer";
 // import LabelComponent from "./LabelComponent/LabelComponent";
 // import ImageBox from "./ImageBox";
 // import RowContainer from "./RowContainer";
@@ -10,6 +11,7 @@ const components = {
   Container,
   LabelComponent,
   ImageBox,
+  RowContainer,
 };
 function Component({ item }) {
   // Only render if item is a container or type is undefined
