@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-function LabelComponent({ id, item }) {
+function LabelComponent({ item }) {
   return (
     <section className="text-black">
-      <span className="font-2xl text-2xl">TEST</span>
-      {item.value || "Text"}
+      <span className="font-4xl text-4xl"> {item.value || "Text"}</span>
     </section>
   );
 }
