@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./components/Layout";
-import "./index.css";
+import "./output.css";
 function Main() {
   const [productData, setProductData] = useState(null);
   const lastPart = window.location.pathname.split("/").pop();
