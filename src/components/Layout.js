@@ -26,9 +26,6 @@ function Component({ item }) {
     }
 
     return item.children.map((child) => {
-      {
-        console.log(child, "PP");
-      }
       return (
         <Component
           key={child.id}

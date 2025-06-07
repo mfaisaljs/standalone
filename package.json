@@ -4,7 +4,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development --watch",
+    "start": "tailwindcss -i ./src/index.css -o ./src/output.css  && webpack --mode=development --watch",
     "build": "tailwindcss -i ./src/index.css -o ./src/output.css  && webpack --mode=production  --watch",
     "build-css": "tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
@@ -33,6 +33,7 @@
     "flatted": "^3.3.3",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "uuid": "^11.1.0"
   }
 }
