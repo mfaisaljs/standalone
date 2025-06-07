@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
-function LabelComponent({ item }) {
+import useStyles from "../helper/genClass";
+function LabelComponent({ id, item }) {
+  const labelClass = useStyles({ ...item.css }, id);
   return (
-    <section className="text-black">
-      <span className="font-4xl text-4xl"> {item.value || "Text"}</span>
+    <section className="w-full relative">
+      <div className={`${labelClass} w-full`}>{item.value || "Text"}</div>
     </section>
   );
 }

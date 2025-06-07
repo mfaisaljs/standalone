@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./components/Layout";
 import "./output.css";
+import useStyles from "./helper/genClass";
 function Main() {
   const [productData, setProductData] = useState(null);
   const lastPart = window.location.pathname.split("/").pop();
@@ -15,11 +16,11 @@ function Main() {
           `https://pricing-nine-tau.vercel.app/api/v1/product/${data.product.id}`
         );
         const layout = await productLayout.json();
+        console.log(layout, "LLA");
         setProductData({
           shopify: data,
           layout: layout[0].data,
         });
-        console.log(layout);
       } catch (error) {
         console.error("Error fetching product:", error);
       }
