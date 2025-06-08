@@ -11,7 +11,7 @@ function Container({ type, children }) {
       // className={`${type} ${
       //   type == "row_container" ? "flex-row basis-full" : "flex-row "
       // }  flex flex-1 flex-wrap   w-auto min-h-10 h-auto gap-2 p-2 items-start relative`}
-      className={`${myClass}`}
+      className={`${myClass} `}
     >
       {children}
     </div>
@@ -19,7 +19,9 @@ function Container({ type, children }) {
 }
 const styles = {
   container: (isRowBased) => ({
-    flex: "1",
+    flex: isRowBased ? 1 : "none",
+
+    width: "100%",
   }),
   section: (isRowBased) => ({
     display: "flex",
