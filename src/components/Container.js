@@ -19,9 +19,9 @@ function Container({ type, children }) {
 }
 const styles = {
   container: (isRowBased) => ({
-    flex: isRowBased ? 1 : "none",
+    flex: isRowBased ? "auto" : "none",
 
-    width: "100%",
+    width: isRowBased ? "fit-content" : "100%",
   }),
   section: (isRowBased) => ({
     display: "flex",

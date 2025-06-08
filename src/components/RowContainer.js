@@ -22,14 +22,14 @@ const styles = {
   row: (isRowBased) => ({
     display: isRowBased ? "flex" : "flex",
     flexDirection: isRowBased ? "row" : "column",
-    flexWrap: "wrap",
+    flexWrap: isRowBased ? "nowrap" : "wrap",
     width: "100%",
     minHeight: "40px",
     height: "auto",
     position: "relative",
     flexBasis: "100%",
     flex: "1 1 auto",
-    gap: "5px",
+    gap: "0.1px",
   }),
   //   section: (isRowBased) => ({
   //     display: "flex",
