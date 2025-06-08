@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import useStyles from "../helper/genClass";
+import { useStyles } from "../helper/hooks";
 function LabelComponent({ id, item }) {
   const labelClass = useStyles({ ...item.css }, id);
   return (

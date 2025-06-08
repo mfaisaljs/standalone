@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./components/Layout";
 import "./output.css";
-import useStyles from "./helper/genClass";
+import { useStyles } from "./helper/hooks";
 import { v4 as uuid4 } from "uuid";
 function Main() {
   const [productData, setProductData] = useState(null);
@@ -33,7 +33,7 @@ function Main() {
   const containerClass = useStyles({ ...productData?.settings }, uuid4());
   return (
     <div
-      className={containerClass}
+      className={`${containerClass} ${"Parent"}`}
       style={{ width: "100%", margin: "0 auto", padding: "0 1.5rem" }}
     >
       {productData?.shopify?.product?.title}

@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const useStyles = (styleObj, id) => {
+export const useStyles = (styleObj, id) => {
   console.log(styleObj, "Xxxxxxxx");
   const classNameRef = useRef(
     `${"css-"}${id}${"-"}${Math.random().toString(36).substr(2, 9)}`
@@ -23,5 +23,14 @@ const useStyles = (styleObj, id) => {
 
   return classNameRef.current;
 };
+export const useMediaQuery = (query) => {
+  const mediaMatch = window.matchMedia(query);
+  const [matches, setMatches] = useState(mediaMatch.matches);
 
-export default useStyles;
+  useEffect(() => {
+    const handler = (e) => setMatches(e.matches);
+    mediaMatch.addListener(handler);
+    return () => mediaMatch.removeListener(handler);
+  });
+  return matches;
+};
