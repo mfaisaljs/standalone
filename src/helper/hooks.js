@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export const useStyles = (styleObj, id) => {
-  console.log(styleObj, "Xxxxxxxx");
+  if (!styleObj) return null;
   const classNameRef = useRef(
     `${"css-"}${id}${"-"}${Math.random().toString(36).substr(2, 9)}`
   );

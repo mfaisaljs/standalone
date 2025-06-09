@@ -3,6 +3,7 @@ import Container from "./Container";
 import LabelComponent from "./LabelComponent";
 import ImageBox from "./ImageBox";
 import RowContainer from "./RowContainer";
+import Thumbnail from "./Thumbnail";
 // import LabelComponent from "./LabelComponent/LabelComponent";
 // import ImageBox from "./ImageBox";
 // import RowContainer from "./RowContainer";
@@ -12,6 +13,7 @@ const components = {
   LabelComponent,
   ImageBox,
   RowContainer,
+  Thumbnail,
 };
 function Component({ item }) {
   // Only render if item is a container or type is undefined

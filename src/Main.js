@@ -14,9 +14,11 @@ function Main() {
         const data = await productRequest.json();
 
         const productLayout = await fetch(
-          `https://pricing-nine-tau.vercel.app/api/v1/product/${data.product.id}`
+          `https://largely-main-ringtail.ngrok-free.app/api/v1/product/${data.product.id}`
         );
+
         const layout = await productLayout.json();
+
         setProductData({
           shopify: data,
           layout: layout[0].data,
