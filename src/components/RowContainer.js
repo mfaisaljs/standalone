@@ -22,7 +22,7 @@ const styles = {
   row: (isRowBased) => ({
     display: isRowBased ? "flex" : "flex",
     flexDirection: isRowBased ? "row" : "column",
-    flexWrap: isRowBased ? "nowrap" : "wrap",
+    flexWrap: isRowBased ? "wrap" : "wrap",
     width: "100%",
     minHeight: "40px",
     height: "auto",
