@@ -12,21 +12,16 @@ function Thumbnail({ id, item }) {
     context.productData.settings?.presets[presetValue] || {},
     id
   );
+  const titleClass = useStyles(
+    context.productData.settings?.presets[presetValue]?.title || {},
+    id
+  );
   return (
     <>
       <div className={`flex flex-row flex-1 ${containerClass} `}>
         <div className="w-full relative ">
           <div className="w-full relative ">
-            <div
-              className="py-10 text-black"
-              style={{
-                background: "#f1f1f1",
-                padding: "20px",
-                marginBottom: "20px",
-              }}
-            >
-              {item.value}
-            </div>
+            <div className={`${titleClass}`}>{item.value}</div>
             <div className="flex flex-row gap-20">
               {item.options.map((f) => {
                 return (
