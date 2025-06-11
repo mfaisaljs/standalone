@@ -1,9 +1,20 @@
-import React from "react";
-
+import React, { useContext, useState, useEffect } from "react";
+import { GlobalContext } from "../context/global";
+import { useStyles } from "../helper/hooks";
 function Thumbnail({ id, item }) {
+  const context = useContext(GlobalContext);
+  const [presetValue, setPresetValue] = useState("");
+  useEffect(() => {
+    setPresetValue(item.preset);
+  }, [item]);
+  console.log(context.productData);
+  const containerClass = useStyles(
+    context.productData.settings?.presets[presetValue] || {},
+    id
+  );
   return (
     <>
-      <div className="flex flex-row flex-1 ">
+      <div className={`flex flex-row flex-1 ${containerClass} `}>
         <div className="w-full relative ">
           <div className="w-full relative ">
             <div
